@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+      "baseUrl":"/",
+      "target": "ES5",
+      "allowJs": true,
+      "sourceMap": true,
+      "module":"commonjs",
+      "moduleResolution":"node",
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "removeComments": true,
+  
+      //strictmode - flipped
+      "strict":false,
+      "noImplicitAny": false,
+      "noImplicitThis":false,
+      "noUnusedLocals":false,
+      "noUnusedParameters":false,
+      "noImplicitReturns":false,
+      "alwaysStrict":false, 
+      "skipLibCheck": true,
+  
+      "lib": ["es2017", "dom"]
+    },
+    "exclude": [    
+      "**/*.spec.ts",     
+      "src/main-aot.ts",   
+      "node_modules/**/*.d.ts",
+      "scripts/typings/d.ts"
+    ]
+  }

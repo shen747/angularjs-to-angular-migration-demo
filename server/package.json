@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Cockroach db (new sql) based backend using expressjs and nodejs",
+  "main": "start_main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Meddage Shehan Ramesh Perera",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/register": "^7.6.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "lodash": "^4.17.15",
+    "nodemon": "^1.19.2",
+    "sequelize": "^5.19.0",
+    "sequelize-cockroachdb": "^1.0.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.1",
+    "@types/lodash": "^4.14.139"
+  }
+}

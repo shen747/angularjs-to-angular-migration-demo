@@ -1,0 +1,53 @@
+<div class="text-center">
+    <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let home of homes">
+                    <td>{{home.name}}</td>
+                    <td>{{home.email}}</td>
+                    <td>{{home.phone}}</td>
+                    <td>{{home.address}}</td>
+                    <td class="company-buttons">
+                        <a class="btn btn-warning mr-1" (click)=editHome(home.homeid)>Edit</a>
+                        <a class="btn btn-danger" (click)="deleteClicked(home.homeid)">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</div>
+
+<!-- AngularJS Component Template -->
+
+<!-- <div class="text-center">
+        <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="home in $ctrl.homes">
+                        <td>{{home.name}}</td>
+                        <td>{{home.email}}</td>
+                        <td>{{home.phone}}</td>
+                        <td>{{home.address}}</td>
+                        <td class="company-buttons">
+                            <a class="btn btn-warning" ui-sref="edit({homeId:home.homeid})">Edit</a>
+                            <a class="btn btn-danger" ng-click="$ctrl.deleteClicked(home.homeid)">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+</div> -->

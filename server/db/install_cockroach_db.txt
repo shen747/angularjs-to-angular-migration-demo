@@ -1,0 +1,6 @@
+1.download cockroach db,unzip it and copy the cockroach.exe file to this folder.
+
+> if the exe is named otherwise rename it to be cockroach.exe
+
+You can download and install cockroach db from here:
+https://www.cockroachlabs.com/docs/stable/install-cockroachdb.html
