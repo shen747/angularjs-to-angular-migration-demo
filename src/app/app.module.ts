@@ -1,7 +1,7 @@
 import { NgModule, Component } from '@angular/core';
 import { UpgradeModule } from '@angular/upgrade/static';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UrlHandlingStrategy, UrlTree } from '@angular/router';
 
@@ -34,7 +34,7 @@ class Ng1Ng2UrlHandlingStrategy implements UrlHandlingStrategy {
 @NgModule({
     imports: [
         BrowserModule,
-        FormsModule,
+        ReactiveFormsModule,
         UpgradeModule,
         HttpClientModule,
         AppRoutingModule

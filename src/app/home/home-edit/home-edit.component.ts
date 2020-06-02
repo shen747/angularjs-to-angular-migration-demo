@@ -1,6 +1,8 @@
 import { Component, OnInit, Inject } from "@angular/core";
 import { HomeService } from "../home.service";
 import * as _ from "lodash";
+import { FormBuilder, FormGroup } from "@angular/forms";
+
 
 @Component({
     selector: 'cc-home-edit',
@@ -11,23 +13,37 @@ export class HomeEditComponent implements OnInit {
     //private class variables
     _editedHomeId: number;
     _selectedHome: any;
-    _isNew: boolean;   
+    _isNew: boolean;
+
+    homeForm: FormGroup;
 
     constructor(
-                @Inject('$state') private $state,
-                @Inject('$stateParams') private $stateParams,
-                private homeService:HomeService ) {
+        @Inject('$state') private $state,
+        @Inject('$stateParams') private $stateParams,
+        private homeService: HomeService,
+        private fb: FormBuilder) {
         console.log('---- Home Edit Component ----');
-        this._editedHomeId = !_.isNumber(this.$stateParams.homeId) ? this.$stateParams.homeId : null;      
+        this._editedHomeId = !_.isNumber(this.$stateParams.homeId) ? this.$stateParams.homeId : null;
         this._isNew = _.isUndefined(this._editedHomeId);
-        this._selectedHome = {};    
+        this._selectedHome = {};
+
+
+
     }
 
 
-    ngOnInit(): void {  
+    ngOnInit(): void {
         this.homeService.getHome(this._editedHomeId).then(res => {
-            this._selectedHome = _.get(res,'data') || {};
+            this._selectedHome = _.get(res, 'data') || {};
         });
+
+        //creating the reactive form using FormBuilder
+        this.homeForm = this.fb.group({
+            name: this._selectedHome.name,
+            phone: this._selectedHome.phone,
+            email: this._selectedHome.email,
+            address: this._selectedHome.address
+        });       
     }
 
     saveHome() {

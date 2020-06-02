@@ -15,15 +15,13 @@ angular.module('home.app.home.list',[
 //conversion ready angularjs component
 .component('ccHomeList',{
     bindings:{
-
     },
     templateUrl:'./home-list.component.html',
     controller: class Home{
 
-        homes:any;
-        homeService:any;
+        homes:any;        
 
-        constructor(homeService){
+        constructor(private homeService:any){
             this.homeService = homeService;
         }
 
