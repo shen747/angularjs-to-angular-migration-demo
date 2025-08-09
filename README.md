@@ -71,4 +71,3 @@ process. If you don't have this sectional structure;
 
   I hope this project helps with your AngularJS -> Angular migration efforts.
 
-  For a more detailed explanation of the migration process,See [From AngularJS -> Angular Quick Guide](http://shen747.blogspot.com/)
